@@ -8,7 +8,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "materialize-css": "^1.0.0-rc.2",
     "vue": "^3.2.47",
     "vue-basic-alert": "^1.1.0",
     "vue-router": "^4.1.6"
