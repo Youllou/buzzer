@@ -1,0 +1,21 @@
+@import './base.css';
+
+.html{
+    color: whitesmoke;
+}
+
+input{
+    color: whitesmoke;
+}
+
+.row {
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-align: baseline;
+}
+.col {
+    margin-left:0 !important;
+}
+.material-icons{
+    right:8px;
+}
