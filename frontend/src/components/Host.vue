@@ -116,7 +116,7 @@ export default {
 	},
 	methods: {
 		createRoom(){
-			fetch('http://localhost:3000/buzzer/')
+			fetch('http://92.222.177.232:3000/buzzer/')
 				.then(response => {
 					console.log(response)
 					response.json().then(result => {
@@ -131,7 +131,7 @@ export default {
 				})
 		},
 		refreshPlayers() {
-			fetch('http://localhost:3000/player/'+this.id)
+			fetch('http://92.222.177.232:3000/player/'+this.id)
 				.then(response => response.json())
 				.then(data => {
 					this.players = data;
@@ -141,7 +141,7 @@ export default {
 				})
 		},
 		score(player,score){
-			fetch('http://localhost:3000/player/'+this.id+'/score', {
+			fetch('http://92.222.177.232:3000/player/'+this.id+'/score', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -165,7 +165,7 @@ export default {
 		},
 		lockAll(){
 			this.allLocked = !this.allLocked;
-			fetch('http://localhost:3000/player/'+this.id+'/lock', {
+			fetch('http://92.222.177.232:3000/player/'+this.id+'/lock', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -188,7 +188,7 @@ export default {
 		},
 		lock(player){
 			player.locked = !player.locked;
-			fetch('http://localhost:3000/player/'+this.id+'/lock/'+player.name, {
+			fetch('http://92.222.177.232:3000/player/'+this.id+'/lock/'+player.name, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -210,7 +210,7 @@ export default {
 				});
 		},
 		unbuzzAll(){
-			fetch('http://localhost:3000/player/'+this.id+'/buzz', {
+			fetch('http://92.222.177.232:3000/player/'+this.id+'/buzz', {
 				method: 'DELETE',
 				headers: {
 					'Content-Type': 'application/json',
@@ -229,7 +229,7 @@ export default {
 				});
 		},
 		unbuzz(player){
-			fetch('http://localhost:3000/player/'+this.id+'/buzz/'+player.name, {
+			fetch('http://92.222.177.232:3000/player/'+this.id+'/buzz/'+player.name, {
 				method: 'DELETE',
 				headers: {
 					'Content-Type': 'application/json',
@@ -248,7 +248,7 @@ export default {
 				});
 		},
 		ban(player){
-			fetch('http://localhost:3000/player/'+this.id+'/'+player.name, {
+			fetch('http://92.222.177.232:3000/player/'+this.id+'/'+player.name, {
 				method: 'DELETE',
 				headers: {
 					'Content-Type': 'application/json',
