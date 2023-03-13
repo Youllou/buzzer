@@ -108,7 +108,7 @@ export default {
 								console.log(data)
 								this.name = data.name;
 								this.room = data.roomID;
-								this.$router.push("/player/" + this.room)
+								this.$router.push("./player/" + this.room)
 								this.timer = setInterval(this.refreshPlayers, 1000);
 							});
 					}
