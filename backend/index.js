@@ -25,7 +25,9 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization', 'Accept','cookie','cookies']
 }));
 
-
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
 app.use('/buzzer', buzzerRoutes);
 app.use('/player', playerRoutes);
 
