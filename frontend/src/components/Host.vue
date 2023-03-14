@@ -101,6 +101,11 @@ export default {
 		}
 	},
 	mounted() {
+		navigator.permissions.query({ name: "write-on-clipboard" }).then((result) => {
+			if (result.state == "granted" || result.state == "prompt") {
+				alert("Write access granted!");
+			}
+		});
 		if (this.id == 0){
 			this.createRoom();
 		}else{
