@@ -19,7 +19,7 @@ app.use(express.json());
 // load cors
 // setup cors for localhost
 app.use(cors({
-    origin: ["http://92.222.177.232",/http:\/\/localhost*/,/http:\/\/192.168.*.*/],
+    origin: ["http://92.222.177.232","http://youllou.com",/http:\/\/localhost*/,/http:\/\/192.168.*.*/],
     credentials: false,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Accept','cookie','cookies']
