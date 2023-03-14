@@ -120,7 +120,7 @@ export default {
 	},
 	methods: {
 		createRoom(){
-			fetch('http://youllou.com/buzzer/')
+			fetch('http://youllou.com:3000/buzzer/')
 				.then(response => {
 					response.json().then(result => {
 						let id = result.id;
@@ -134,7 +134,7 @@ export default {
 				})
 		},
 		refreshPlayers() {
-			fetch('http://youllou.com/player/'+this.id)
+			fetch('http://youllou.com:3000/player/'+this.id)
 				.then(response => response.json())
 				.then(data => {
 					this.players = data;
@@ -144,7 +144,7 @@ export default {
 				})
 		},
 		score(player,score){
-			fetch('http://youllou.com/player/'+this.id+'/score', {
+			fetch('http://youllou.com:3000/player/'+this.id+'/score', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -168,7 +168,7 @@ export default {
 		},
 		lockAll(){
 			this.allLocked = !this.allLocked;
-			fetch('http://youllou.com/player/'+this.id+'/lock', {
+			fetch('http://youllou.com:3000/player/'+this.id+'/lock', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -191,7 +191,7 @@ export default {
 		},
 		lock(player){
 			player.locked = !player.locked;
-			fetch('http://youllou.com/player/'+this.id+'/lock/'+player.name, {
+			fetch('http://youllou.com:3000/player/'+this.id+'/lock/'+player.name, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -213,7 +213,7 @@ export default {
 				});
 		},
 		unbuzzAll(){
-			fetch('http://youllou.com/player/'+this.id+'/buzz', {
+			fetch('http://youllou.com:3000/player/'+this.id+'/buzz', {
 				method: 'DELETE',
 				headers: {
 					'Content-Type': 'application/json',
@@ -232,7 +232,7 @@ export default {
 				});
 		},
 		unbuzz(player){
-			fetch('http://youllou.com/player/'+this.id+'/buzz/'+player.name, {
+			fetch('http://youllou.com:3000/player/'+this.id+'/buzz/'+player.name, {
 				method: 'DELETE',
 				headers: {
 					'Content-Type': 'application/json',
@@ -251,7 +251,7 @@ export default {
 				});
 		},
 		ban(player){
-			fetch('http://youllou.com/player/'+this.id+'/'+player.name, {
+			fetch('http://youllou.com:3000/player/'+this.id+'/'+player.name, {
 				method: 'DELETE',
 				headers: {
 					'Content-Type': 'application/json',

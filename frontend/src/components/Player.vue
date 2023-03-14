@@ -88,7 +88,7 @@ export default {
 	},
 	methods:{
 		setNameAndRoom(){
-			fetch('http://youllou.com/player/'+this.roomform, {
+			fetch('http://youllou.com:3000/player/'+this.roomform, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
@@ -115,7 +115,7 @@ export default {
 				});
 		},
 		buzz(){
-			fetch('http://youllou.com/player/'+this.room+'/buzz', {
+			fetch('http://youllou.com:3000/player/'+this.room+'/buzz', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
@@ -139,7 +139,7 @@ export default {
 				});
 		},
 		refreshPlayers()  {
-			fetch('http://youllou.com/player/'+this.room)
+			fetch('http://youllou.com:3000/player/'+this.room)
 				.then(response => {
 					if (response.status === 404) {
 						//show an alert saying that the room doesn't exist or that the room is full
