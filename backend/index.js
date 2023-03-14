@@ -19,7 +19,7 @@ app.use(express.json());
 // load cors
 // setup cors for localhost
 app.use(cors({
-    origin: "http://92.222.177.232",
+    origin: ["http://92.222.177.232",/http:\/\/localhost*/,/http:\/\/192.168.*.*/],
     credentials: false,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Accept','cookie','cookies']
@@ -33,7 +33,7 @@ app.use('/player', playerRoutes);
 
 
 
-app.listen(3000, "92.222.177.232" ,() => {
+app.listen(3000 ,() => {
     console.log('Server started on port 3000');
 });
 

@@ -19,4 +19,5 @@ const router = createRouter({
     history: createWebHistory()
 });
 
+
 createApp(app).use(router).mount('#app')

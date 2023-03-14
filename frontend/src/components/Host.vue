@@ -3,7 +3,11 @@
 		<div class="row">
 			<h1 class="">Host</h1>
 			<div class="col m6"></div>
-			<div class="col m3" id="qr"></div>
+			<div class="col m3 flex" id="Share">
+				<div id="qr"></div>
+				<br>
+				<a id="link" class="btn-floating grey"><i class="material-icons" @click="share()">share</i></a>
+			</div>
 		</div>
 		<div v-if="loading" class="loading">Loading...</div>
 		<!-- the room code -->
@@ -105,7 +109,7 @@ export default {
 		}
 		this.$nextTick(() => {
 			this.qrcode = new QRCode(document.getElementById("qr"), {
-				text: "http://192.168.1.100:5173/player/"+this.id,
+				text: "http://92.222.177.232/player/"+this.id,
 				width: 128,
 				height: 128,
 				colorDark : "#000000",
@@ -118,10 +122,9 @@ export default {
 		createRoom(){
 			fetch('http://92.222.177.232:3000/buzzer/')
 				.then(response => {
-					console.log(response)
 					response.json().then(result => {
 						let id = result.id;
-						this.$router.push({ name: 'host', params: { id:id } })
+						this.$router.push({ name: 'host', params: { room:id } })
 						this.loading = false;
 						this.$watch('id', () => {
 							console.log("id changed")
@@ -267,6 +270,25 @@ export default {
 					console.error('Error:', error);
 				});
 		},
+		share(){
+			if (navigator.share) {
+				navigator.share({
+					title: 'Buzzer',
+					text: 'Join my buzzer room',
+					url: "http://92.222.177.232/player/"+this.id
+				})
+					.then(() => console.log('Successful share'))
+					.catch((error) => console.log('Error sharing', error));
+			}else{
+				navigator.clipboard.writeText("http://92.222.177.232/player/"+this.id)
+					.then(() => {
+						console.log('Async: Copying to clipboard was successful!');
+					})
+					.catch(err => {
+						console.error('Async: Could not copy text: ', err);
+					});
+			}
+		}
 	},
 	unmounted() {
 		clearInterval(this.timerPlayers);
@@ -278,7 +300,13 @@ export default {
 </script>
 
 <style scoped>
-#qr>img{
-	border: 1px solid white !important;
+.flex{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+}
+.btn-floating>i{
+	right: 1px;
 }
 </style>
