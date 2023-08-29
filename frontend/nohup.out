@@ -1,0 +1,60 @@
+
+> frontend@0.0.0 dev
+> vite --host
+
+sh: 1: vite: not found
+
+> frontend@0.0.0 dev
+> vite --host
+
+
+  VITE v4.1.4  ready in 480 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://92.222.177.232:5173/
+4:16:03 AM [vite] page reload index.html
+4:16:18 AM [vite] Internal server error: Invalid URL
+      at new NodeError (node:internal/errors:399:5)
+      at new URL (node:internal/url:588:13)
+      at viteServeRawFsMiddleware (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:39238:21)
+      at call (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:47328:7)
+      at next (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:47272:5)
+      at viteTransformMiddleware (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:60751:9)
+      at call (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:47328:7)
+      at next (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:47272:5)
+      at file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:39131:28
+      at viteServePublicMiddleware (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:39181:9)
+4:17:38 AM [vite] Internal server error: Invalid URL
+      at new NodeError (node:internal/errors:399:5)
+      at new URL (node:internal/url:588:13)
+      at viteServeRawFsMiddleware (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:39238:21)
+      at call (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:47328:7)
+      at next (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:47272:5)
+      at viteTransformMiddleware (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:60751:9)
+      at call (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:47328:7)
+      at next (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:47272:5)
+      at file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:39131:28
+      at viteServePublicMiddleware (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:39181:9)
+4:18:53 AM [vite] page reload dist/index.html
+4:38:40 AM [vite] Internal server error: Invalid URL
+      at new NodeError (node:internal/errors:399:5)
+      at new URL (node:internal/url:588:13)
+      at viteServeRawFsMiddleware (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:39238:21)
+      at call (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:47328:7)
+      at next (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:47272:5)
+      at viteTransformMiddleware (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:60751:9)
+      at call (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:47328:7)
+      at next (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:47272:5)
+      at file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:39131:28
+      at viteServePublicMiddleware (file:///home/ubuntu/buzzer/frontend/node_modules/vite/dist/node/chunks/dep-ca21228b.js:39181:9)
+4:42:11 AM [vite] page reload dist/index.html
+4:42:38 AM [vite] page reload index.html
+4:43:24 AM [vite] page reload index.html
+4:43:31 AM [vite] page reload dist/index.html
+4:47:16 AM [vite] page reload dist/index.html
+4:49:14 AM [vite] page reload dist/index.html
+4:51:47 AM [vite] page reload dist/index.html
+4:55:17 AM [vite] page reload index.html
+4:55:38 AM [vite] page reload dist/index.html
+4:57:28 AM [vite] page reload index.html
+4:57:35 AM [vite] page reload dist/index.html
